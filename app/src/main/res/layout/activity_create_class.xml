@@ -36,11 +36,11 @@
 
         <EditText
             android:id="@+id/userName"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="36dp"
             android:background="@drawable/input"
-            android:hint="UserName"
+            android:hint="name"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,12 +48,13 @@
 
         <EditText
             android:id="@+id/num"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/input"
             android:focusable="false"
             android:hint="Number"
+            android:text="1"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +62,7 @@
 
         <EditText
             android:id="@+id/word"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/input"
@@ -73,7 +74,7 @@
 
         <EditText
             android:id="@+id/trans"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/input"
@@ -85,7 +86,7 @@
 
         <Button
             android:id="@+id/createBtn"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="612dp"

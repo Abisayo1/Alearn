@@ -18,7 +18,6 @@ class CreateClass : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateClassBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.num.setText(numAtp)
 
         binding.createBtn.setOnClickListener{
             val name = binding.userName.text.toString().trim()
@@ -29,11 +28,12 @@ class CreateClass : AppCompatActivity() {
             database = FirebaseDatabase.getInstance().getReference("Users")
             val User = User(name, num, word, trans)
             database.child(name).setValue(User).addOnSuccessListener {
-                numAtp++
-                binding.num.setText(numAtp)
+                binding.num.setText("$numAtp")
                 binding.userName.text.clear()
                 binding.word.text.clear()
                 binding.trans.text.clear()
+                numAtp++
+                
 
                 Toast.makeText(this, "Successfully Created!", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener {
