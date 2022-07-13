@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "379943433951",
+    "project_id": "alearn-62a4c",
+    "storage_bucket": "alearn-62a4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379943433951:android:4cc1e8618fcd51b2b21b6a",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379943433951-cd4qibllo06ptvn7a2h7k54a3jr43263.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgaNZmE0zDQos7I5ls6nQgFrupy9cPPhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379943433951-cd4qibllo06ptvn7a2h7k54a3jr43263.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

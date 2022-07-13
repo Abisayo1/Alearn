@@ -28,12 +28,13 @@ class CreateClass : AppCompatActivity() {
             database = FirebaseDatabase.getInstance().getReference("Users")
             val User = User(name, num, word, trans)
             database.child(name).setValue(User).addOnSuccessListener {
-                binding.num.setText("$numAtp")
                 binding.userName.text.clear()
                 binding.word.text.clear()
                 binding.trans.text.clear()
                 numAtp++
-                
+                binding.num.setText("$numAtp")
+
+
 
                 Toast.makeText(this, "Successfully Created!", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener {
