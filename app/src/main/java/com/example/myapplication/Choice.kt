@@ -24,5 +24,10 @@ class Choice : AppCompatActivity() {
             startActivity(intent)
 
         }
+
+        binding.button3.setOnClickListener {
+            val intent = Intent(this, CreateClass::class.java)
+            startActivity(intent)
+        }
     }
 }
