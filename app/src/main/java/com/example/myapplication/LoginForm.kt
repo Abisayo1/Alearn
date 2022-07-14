@@ -17,15 +17,21 @@ class LoginForm : AppCompatActivity() {
 
 
 
-        binding.readBtn.setOnClickListener{
-            if(binding.userName.text.toString().trim().isEmpty()){
-                Toast.makeText( this,"Please enter the username of your teacher", Toast.LENGTH_SHORT).show()
+        binding.readBtn.setOnClickListener {
+            if (binding.userName.text.toString().trim().isEmpty()) {
+                Toast.makeText(
+                    this,
+                    "Please enter the username of your teacher",
+                    Toast.LENGTH_SHORT
+                ).show()
             } else {
                 val name = binding.userName.text.toString().trim()
 
                 val intent = Intent(this, LoginRead::class.java)
                 intent.putExtra(Eng2010Constants.USER_NAME, name)
                 startActivity(intent)
+
+            }
 
         }
 
@@ -46,4 +52,3 @@ class LoginForm : AppCompatActivity() {
 
         }
     }
-}
