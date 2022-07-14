@@ -16,6 +16,18 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LoginForm"
+            android:exported="false" />
+        <activity
+            android:name=".LoginRead"
+            android:exported="false" />
+        <activity
+            android:name=".LoginWrite"
+            android:exported="false" />
+        <activity
+            android:name=".PlayAreaChoice"
+            android:exported="false" />
+        <activity
             android:name=".CreateClass"
             android:exported="false" />
         <activity

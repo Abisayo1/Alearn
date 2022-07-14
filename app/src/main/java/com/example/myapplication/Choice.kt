@@ -29,5 +29,10 @@ class Choice : AppCompatActivity() {
             val intent = Intent(this, CreateClass::class.java)
             startActivity(intent)
         }
+
+        binding.buttonLog.setOnClickListener {
+            val intent = Intent(this, LoginForm::class.java)
+            startActivity(intent)
+        }
     }
 }

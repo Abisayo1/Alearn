@@ -5,7 +5,7 @@
         android:checkable="true"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_emoji_events_24"
-        android:iconTint="#FFD700"
+        app:iconTint="#FFD700"
         android:orderInCategory="100"
         android:tooltipText="Check Score"
         android:title="Check Score"
