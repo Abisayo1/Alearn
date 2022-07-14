@@ -73,11 +73,12 @@ class LoginWrite : AppCompatActivity() {
                 numAtp++
                 scores++
                 Toast.makeText(this, "Well Done!", Toast.LENGTH_SHORT).show()
+                model.speak("Nice!")
                 binding.score.text = "$scores"
                 binding.edtText.text?.clear()
 
 
-            } else if ("${binding.question8.text}".equals("elephant", ignoreCase = true)) {
+            } else if ("${binding.question8.text}".equals("Elephantssssssssss#@", ignoreCase = true)) {
 
                 binding.done.text = "Done"
             }
@@ -164,7 +165,7 @@ class LoginWrite : AppCompatActivity() {
                 binding.question123.isVisible = true
                 num++
 
-                Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
+
 
 
 

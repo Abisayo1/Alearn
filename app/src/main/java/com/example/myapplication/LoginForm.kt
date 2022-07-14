@@ -21,19 +21,23 @@ class LoginForm : AppCompatActivity() {
 
 
         binding.readBtn.setOnClickListener {
-            if (binding.userName.text.toString().trim().isEmpty()) {
-                Toast.makeText(
-                    this,
-                    "Please enter the username of your teacher",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
-                val name = binding.userName.text.toString().trim()
+            val name = binding.userName.text.toString().trim()
+            database = FirebaseDatabase.getInstance().getReference(name)
+            database.child("1").get().addOnSuccessListener {
+                if (it.exists()) {
+                    val intent = Intent(this, LoginRead::class.java)
+                    intent.putExtra(Eng2010Constants.USER_NAME, name)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(
+                        this,
+                        "This class does not exist, please enter the correct username of your teacher",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
-                val intent = Intent(this, LoginRead::class.java)
-                intent.putExtra(Eng2010Constants.USER_NAME, name)
-                startActivity(intent)
-
+                }
+            }.addOnFailureListener {
+                Toast.makeText(this, "failed to create class!", Toast.LENGTH_SHORT).show()
             }
 
         }

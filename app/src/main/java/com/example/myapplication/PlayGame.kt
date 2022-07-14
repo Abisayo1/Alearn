@@ -94,7 +94,7 @@ class PlayGame : AppCompatActivity() {
                                            before: Int, count: Int) {
 
                    if (
-                       count == 2
+                       count == 1
                    ) {edtText.text?.clear()
                     Toast.makeText(this@PlayGame, "Do not type, speak to the mic to win this level", Toast.LENGTH_SHORT).show()
                    }
@@ -113,6 +113,7 @@ class PlayGame : AppCompatActivity() {
                         numAtp++
                         scores++
                         Toast.makeText(this, "Well Done!", Toast.LENGTH_SHORT).show()
+                        model.speak("Nice!")
                         score.text = "$scores"
                         edtText.text?.clear()
                         onClicks()
@@ -121,6 +122,7 @@ class PlayGame : AppCompatActivity() {
                         numAtp++
                         edtText.text?.clear()
                         Toast.makeText(this, "OOps!", Toast.LENGTH_SHORT).show()
+                        model.speak("keep trying, you've got this!")
                         onClick()
                     }
                 }

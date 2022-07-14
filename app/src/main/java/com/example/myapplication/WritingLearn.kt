@@ -105,6 +105,7 @@ class WritingLearn : AppCompatActivity() {
                     numAtp++
                     scores++
                     Toast.makeText(this, "Well Done!", Toast.LENGTH_SHORT).show()
+                    model.speak("Nice!")
                     score.text = "$scores"
                     binding.edtText.text?.clear()
                     onClicks()
@@ -113,6 +114,7 @@ class WritingLearn : AppCompatActivity() {
                     numAtp++
                     binding.edtText.text?.clear()
                     Toast.makeText(this, "Oops!", Toast.LENGTH_SHORT).show()
+                    model.speak("keep trying, you've got this!")
                     onClick()
                 }
             }
