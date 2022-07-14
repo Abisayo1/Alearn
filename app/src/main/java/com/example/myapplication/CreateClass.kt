@@ -28,7 +28,6 @@ class CreateClass : AppCompatActivity() {
 
             database = FirebaseDatabase.getInstance().getReference(name)
             database.child("1").get().addOnSuccessListener {
-
                 if (it.exists()) {
                     Toast.makeText(this, "This username is currently in use", Toast.LENGTH_SHORT)
                         .show()
