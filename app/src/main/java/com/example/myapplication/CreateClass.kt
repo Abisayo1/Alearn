@@ -25,10 +25,11 @@ class CreateClass : AppCompatActivity() {
             val word = binding.word.text.toString().trim()
             val trans = binding.trans.text.toString().trim()
 
-            database = FirebaseDatabase.getInstance().getReference("Users")
-            val User = User(name, num, word, trans)
-            database.child(name).setValue(User).addOnSuccessListener {
-                binding.userName.text.clear()
+            database = FirebaseDatabase.getInstance().getReference(name)
+            val User = User(num, word, trans)
+            database.child("$num").setValue(User).addOnSuccessListener {
+                binding.userName.setText(name)
+                binding.userName.isFocusable = false
                 binding.word.text.clear()
                 binding.trans.text.clear()
                 numAtp++
